@@ -98,7 +98,7 @@ class App extends Component {
                            key={index}
                            className={`text-dark ${this.state.isListHidden ? `d-none` : '' }`}
                             data-country-name={country.Country}
-                            data-country-slug={country.slug}
+                            data-country-slug={country.Slug}
                             onClick={this.selectCountryHandler}
                             action
                             >
@@ -136,7 +136,8 @@ class App extends Component {
               </Form>
             </Col>
             <Col xs='12' md='8'>
-              <LineChart countryData={this.state.countryData} />
+              <LineChart countryData={this.state.countryData}>
+              </LineChart>
             </Col>
           </Row>
         </Container>
